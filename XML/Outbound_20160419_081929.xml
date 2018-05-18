@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wmbdex:listOfDocumentFolders version="1.0.0" xmlns:wmbdex="urn:workmateeam.com/wmbdex/draft1.0.0">
+  <wmbdex:documentFolder message="CHECKIN" timeStamp="2016-04-19 08:19:29">
+    <wmbdex:number>WS-12941</wmbdex:number>
+    <wmbdex:title>Test workingset for Atlas DEMO</wmbdex:title>
+    <wmbdex:comments></wmbdex:comments>
+    <wmbdex:status>workingset_verification</wmbdex:status>
+    <wmbdex:actionById>9</wmbdex:actionById>
+    <wmbdex:createdDate>2016-04-19 08:10:21</wmbdex:createdDate>
+    <wmbdex:createdBy>
+      <wmbdex:user />
+      <wmbdex:name>Johnsen, Morten (AVEVA)</wmbdex:name>
+      <wmbdex:initials />
+    </wmbdex:createdBy>
+    <wmbdex:location>
+      <wmbdex:code>SKA</wmbdex:code>
+      <wmbdex:name>SKA</wmbdex:name>
+    </wmbdex:location>
+    <wmbdex:discipline>
+      <wmbdex:code>A</wmbdex:code>
+      <wmbdex:name>ADMINISTRATION (NORSOK)</wmbdex:name>
+    </wmbdex:discipline>
+    <wmbdex:owner>
+      <wmbdex:user />
+      <wmbdex:name>Johnsen, Morten (AVEVA)</wmbdex:name>
+      <wmbdex:initials />
+    </wmbdex:owner>
+    <wmbdex:modificationProject>
+      <wmbdex:code>AFA-004530</wmbdex:code>
+      <wmbdex:name>DUMMY AFA FOR TECH INFO MANAGER OPPDATERINGER</wmbdex:name>
+    </wmbdex:modificationProject>
+    <wmbdex:listOfDocuments>
+      <wmbdex:document>
+        <wmbdex:number>586520</wmbdex:number>
+        <wmbdex:name>TEST-DOC-TIM-ATLAS</wmbdex:name>
+        <wmbdex:description>WORKMATE AND OIH - ATLAS INTEGRATION REQUIREMENTS SPECIFICATION</wmbdex:description>
+        <wmbdex:status />
+        <wmbdex:newRevision>Z1</wmbdex:newRevision>
+        <wmbdex:information>Change</wmbdex:information>
+        <wmbdex:locationCode>SKA</wmbdex:locationCode>
+        <wmbdex:disciplineCode>A</wmbdex:disciplineCode>
+        <wmbdex:docTypeCode>00</wmbdex:docTypeCode>
+        <wmbdex:listOfDocumentRefs>
+          <wmbdex:documentRef>
+            <wmbdex:original>WS-12941/TEST-DOC-TIM-ATLAS.docx</wmbdex:original>
+            <wmbdex:lastUploadedById>9</wmbdex:lastUploadedById>
+          </wmbdex:documentRef>
+          <wmbdex:documentRef type="Master">
+            <wmbdex:original>WS-12941/TEST-DOC-TIM-ATLAS.pdf</wmbdex:original>
+            <wmbdex:lastUploadedById>9</wmbdex:lastUploadedById>
+          </wmbdex:documentRef>
+        </wmbdex:listOfDocumentRefs>
+      </wmbdex:document>
+    </wmbdex:listOfDocuments>
+  </wmbdex:documentFolder>
+</wmbdex:listOfDocumentFolders>

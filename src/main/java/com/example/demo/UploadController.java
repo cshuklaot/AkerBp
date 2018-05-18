@@ -18,8 +18,11 @@ import java.util.List;
 import java.util.Map;
 
 import javax.xml.bind.DatatypeConverter;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 
 import org.apache.commons.io.FilenameUtils;
+
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -28,10 +31,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.xml.sax.SAXException;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ot.akbp.commons.util.InputXaths;
+import com.ot.akbp.commons.util.xml.DOMHelper;
 
 
 @RestController
@@ -44,10 +50,15 @@ public class UploadController {
 
 	@RequestMapping("/store")
 	public ResponseEntity<InputStreamResource> uploadFileMulti( @RequestParam("xmlFile") MultipartFile uploadfile)
-			throws JsonParseException, JsonMappingException, IOException {
+			throws JsonParseException, JsonMappingException, IOException, ParserConfigurationException, SAXException, TransformerException {
 
 		System.out.println("UploadController.uploadFileMulti()");
 		//XML parsing.
+		
+		DOMHelper dom=new DOMHelper(uploadfile.getInputStream());
+		String eleemt = dom.selectText(InputXaths.LISTOFDOCUMENTFOLDERS_VERSION);
+		System.out.println("eleemt---"+eleemt);
+		DOMHelper.write(dom.getDocument(), System.out);
 		return ResponseEntity.ok().build();
 
 	}
