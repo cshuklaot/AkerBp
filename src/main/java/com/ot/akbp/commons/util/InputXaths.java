@@ -41,9 +41,9 @@ public interface InputXaths {
   public  String DOCUMENTFOLDER_TIMESTAMP = "//wmbdex:documentFolder/@timeStamp";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:number</code>.
+     * Xpath for <code>//wmbdex:documentFolder/wmbdex:number</code>.
      */
-  public  String DOCUMENTFOLDER_NUMBER = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:number";
+  public  String DOCUMENTFOLDER_NUMBER = "//wmbdex:documentFolder/wmbdex:number";
 
     /**
      * Xpath for <code>//wmbdex:documentFolder/wmbdex:title</code>.
@@ -56,9 +56,9 @@ public interface InputXaths {
   public  String DOCUMENTFOLDER_COMMENTS = "//wmbdex:documentFolder/wmbdex:comments";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:status</code>.
+     * Xpath for <code>//wmbdex:documentFolder/wmbdex:status</code>.
      */
-  public  String DOCUMENTFOLDER_STATUS = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:status";
+  public  String DOCUMENTFOLDER_STATUS = "//wmbdex:documentFolder/wmbdex:status";
 
     /**
      * Xpath for <code>//wmbdex:documentFolder/wmbdex:actionById</code>.
@@ -81,9 +81,9 @@ public interface InputXaths {
   public  String DOCUMENTFOLDER_USER = "//wmbdex:documentFolder/wmbdex:owner/wmbdex:user";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:name</code>.
+     * Xpath for <code>//wmbdex:documentFolder/wmbdex:modificationProject/wmbdex:name</code>.
      */
-  public  String DOCUMENTFOLDER_NAME = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:name";
+  public  String DOCUMENTFOLDER_NAME = "//wmbdex:documentFolder/wmbdex:modificationProject/wmbdex:name";
 
     /**
      * Xpath for <code>//wmbdex:documentFolder/wmbdex:owner/wmbdex:initials</code>.
@@ -116,69 +116,84 @@ public interface InputXaths {
   public  String DOCUMENTFOLDER_MODIFICATIONPROJECT = "//wmbdex:documentFolder/wmbdex:modificationProject";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments</code>.
+     * Xpath for <code>//wmbdex:listOfDocuments</code>.
      */
-  public  String DOCUMENTFOLDER_LISTOFDOCUMENTS = "//wmbdex:documentFolder/wmbdex:listOfDocuments";
+  public  String LISTOFDOCUMENTS = "//wmbdex:listOfDocuments";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document</code>.
+     * Xpath for <code>//wmbdex:document</code>.
      */
-  public  String DOCUMENTFOLDER_DOCUMENT = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document";
+  public  String DOCUMENT = "//wmbdex:document";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:description</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:number</code>.
      */
-  public  String DOCUMENTFOLDER_DESCRIPTION = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:description";
+  public  String DOCUMENT_NUMBER = "//wmbdex:document/wmbdex:number";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:newRevision</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:name</code>.
      */
-  public  String DOCUMENTFOLDER_NEWREVISION = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:newRevision";
+  public  String DOCUMENT_NAME = "//wmbdex:document/wmbdex:name";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:information</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:description</code>.
      */
-  public  String DOCUMENTFOLDER_INFORMATION = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:information";
+  public  String DOCUMENT_DESCRIPTION = "//wmbdex:document/wmbdex:description";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:locationCode</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:status</code>.
      */
-  public  String DOCUMENTFOLDER_LOCATIONCODE = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:locationCode";
+  public  String DOCUMENT_STATUS = "//wmbdex:document/wmbdex:status";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:disciplineCode</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:newRevision</code>.
      */
-  public  String DOCUMENTFOLDER_DISCIPLINECODE = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:disciplineCode";
+  public  String DOCUMENT_NEWREVISION = "//wmbdex:document/wmbdex:newRevision";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:docTypeCode</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:information</code>.
      */
-  public  String DOCUMENTFOLDER_DOCTYPECODE = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:docTypeCode";
+  public  String DOCUMENT_INFORMATION = "//wmbdex:document/wmbdex:information";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:locationCode</code>.
      */
-  public  String DOCUMENTFOLDER_LISTOFDOCUMENTREFS = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs";
+  public  String DOCUMENT_LOCATIONCODE = "//wmbdex:document/wmbdex:locationCode";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:disciplineCode</code>.
      */
-  public  String DOCUMENTFOLDER_DOCUMENTREF = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef";
+  public  String DOCUMENT_DISCIPLINECODE = "//wmbdex:document/wmbdex:disciplineCode";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:original</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:docTypeCode</code>.
      */
-  public  String DOCUMENTFOLDER_ORIGINAL = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:original";
+  public  String DOCUMENT_DOCTYPECODE = "//wmbdex:document/wmbdex:docTypeCode";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:lastUploadedById</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:listOfDocumentRefs</code>.
      */
-  public  String DOCUMENTFOLDER_LASTUPLOADEDBYID = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:lastUploadedById";
+  public  String DOCUMENT_LISTOFDOCUMENTREFS = "//wmbdex:document/wmbdex:listOfDocumentRefs";
 
     /**
-     * Xpath for <code>//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/@type</code>.
+     * Xpath for <code>//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef</code>.
      */
-  public  String DOCUMENTFOLDER_DOCUMENTREF_TYPE = "//wmbdex:documentFolder/wmbdex:listOfDocuments/wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/@type";
+  public  String DOCUMENT_DOCUMENTREF = "//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef";
+
+    /**
+     * Xpath for <code>//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:original</code>.
+     */
+  public  String DOCUMENT_ORIGINAL = "//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:original";
+
+    /**
+     * Xpath for <code>//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:lastUploadedById</code>.
+     */
+  public  String DOCUMENT_LASTUPLOADEDBYID = "//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/wmbdex:lastUploadedById";
+
+    /**
+     * Xpath for <code>//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/@type</code>.
+     */
+  public  String DOCUMENT_DOCUMENTREF_TYPE = "//wmbdex:document/wmbdex:listOfDocumentRefs/wmbdex:documentRef/@type";
 
 }
 
