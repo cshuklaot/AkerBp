@@ -1,5 +1,6 @@
 package com.ot.akbp.commons.util.mapper;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -10,6 +11,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.documentum.fc.client.IDfSysObject;
+import com.ot.akbp.commons.util.rest.PlainRestObject;
+import com.ot.akbp.commons.util.xml.DOMHelper;
 import com.spr.ajwf.commons.util.CollectionHelper;
 import com.spr.ajwf.commons.util.Pair;
 
@@ -76,7 +79,7 @@ public class NodeToSysObjectMapper {
      * @throws TransformerException
      *             if one of the XPath expressions is invalid.
      */
-    public void process(final DOMHelper node, final IDfSysObject object)
+    public void process(final DOMHelper node, final HashMap<String, Object> object)
             throws TransformerException, Exception {
         if (node == null) {
             return;
@@ -85,8 +88,9 @@ public class NodeToSysObjectMapper {
             final String xPath = entry.getKey();
             final SetSysobjectAttribute setter = entry.getValue();
             final String attrName = setter.getAttributeName();
-            if (object.isAttrRepeating(attrName)) {
-                mapRepeatingAttribute(setter, attrName, node.selectNodeList(xPath), object);
+            NodeList selectNodeList = node.selectNodeList(xPath);
+            if (selectNodeList.getLength()>1) {
+				mapRepeatingAttribute(setter, attrName, selectNodeList, object);
             } else {
                 mapSingleAttribute(setter, attrName, node.selectSingleNode(xPath), object);
             }
@@ -106,7 +110,7 @@ public class NodeToSysObjectMapper {
      *            The setter
      */
     private void mapRepeatingAttribute(final SetSysobjectAttribute setter, final String attrName,
-            final NodeList valueNodes, final IDfSysObject object) throws Exception {
+            final NodeList valueNodes, final HashMap<String, Object> object) throws Exception {
         final int nValues = valueNodes.getLength();
         for (int i = 0; i < nValues; ++i) {
             setter.set(object, attrName, i, valueNodes.item(i));

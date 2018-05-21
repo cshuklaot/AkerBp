@@ -41,12 +41,8 @@ public class UploadController {
 		dom.setNameSpaceNode(NAMESPACENODE);
 		System.out.println(InputXaths.LISTOFDOCUMENTFOLDERS_VERSION + "--------"
 				+ dom.selectText(InputXaths.LISTOFDOCUMENTFOLDERS_VERSION));
-		System.out.println(
-				InputXaths.DOCUMENTFOLDER_CREATEDBY + "--------" + dom.selectText(InputXaths.DOCUMENTFOLDER_CREATEDBY));
-		System.out.println(
-				InputXaths.DOCUMENTFOLDER_COMMENTS + "--------" + dom.selectText(InputXaths.DOCUMENTFOLDER_COMMENTS));
-//		System.out.println(InputXaths.DOCUMENTFOLDER_DOCUMENTREF + "--------"
-//				+ dom.selectText(InputXaths.DOCUMENTFOLDER_DOCUMENTREF));
+		
+
 
 		return ResponseEntity.ok().build();
 
