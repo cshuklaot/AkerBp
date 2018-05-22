@@ -57,11 +57,6 @@ import com.emc.documentum.rest.client.sample.model.json.JsonBatch;
 import com.emc.documentum.rest.client.sample.model.json.JsonBatchCapabilities;
 import com.emc.documentum.rest.client.sample.model.json.JsonFeeds;
 import com.emc.documentum.rest.client.sample.model.json.JsonFolderLink;
-import com.emc.documentum.rest.client.sample.model.json.JsonObjectAspects;
-import com.emc.documentum.rest.client.sample.model.json.JsonType;
-import com.emc.documentum.rest.client.sample.model.json.JsonType71;
-import com.emc.documentum.rest.client.sample.model.json.JsonValueAssistance;
-import com.emc.documentum.rest.client.sample.model.json.JsonValueAssistantRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ot.akbp.commons.util.rest.model.Feed;
 import com.ot.akbp.commons.util.rest.model.FolderLink;
@@ -116,8 +111,7 @@ public class DCTMJacksonClient extends AbstractRestTemplateClient implements DCT
 	@Override
 	public Feed<Repository> getRepositories() {
 		if (repositories == null) {
-			repositories = feed(getHomeDocument(), REPOSITORIES, JsonFeeds.RepositoryFeed.class, null);
-			// getHomeDocument(), REPOSITORIES, JsonFeeds.RepositoryFeed.class);
+			repositories = feed(getHomeDocument(), REPOSITORIES, JsonFeeds.RepositoryFeed.class);
 		}
 		return repositories;
 	}

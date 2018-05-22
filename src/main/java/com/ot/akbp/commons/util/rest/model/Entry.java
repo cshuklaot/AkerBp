@@ -3,8 +3,6 @@
  */
 package com.ot.akbp.commons.util.rest.model;
 
-import java.util.List;
-
 /**
  * the class represents the entry of a feed
  */
@@ -29,11 +27,6 @@ public interface Entry<T extends Linkable> extends Linkable {
 	 * @return entry summary
 	 */
 	String getSummary();
-
-	/**
-	 * @return entry authors
-	 */
-	List<Author> getAuthors();
 
 	/**
 	 * for entry without inline content
