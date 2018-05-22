@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2018. Open Text Corporation. All Rights Reserved.
  */
-package com.ot.akbp.commons.util.rest;
+package com.ot.akbp.commons.util.rest.model;
 
 import java.util.Map;
 
