@@ -82,11 +82,12 @@ public class NodeToSysObjectMapper {
 	 */
 	public void process(final DOMHelper node, final Map<String, Object> object) throws TransformerException, Exception {
 		if (node == null) {
-			return;
+			throw new RuntimeException("MApper found that XML was null");
 		}
 		for (final Entry<String, String> entry : setAttributeMap.entrySet()) {
-			final String xPath = entry.getKey();
-			final String attrName = entry.getValue();
+			final String xPath = entry.getValue();
+			final String attrName = entry.getKey();
+			System.out.println("NodeToSysObjectMapper.process()===" + xPath + "=====" + attrName);
 			NodeList selectNodeList = node.selectNodeList(xPath);
 			if (selectNodeList.getLength() > 1) {
 				mapRepeatingAttribute(attrName, selectNodeList, object);
