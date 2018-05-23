@@ -12,7 +12,7 @@ import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.client.ResponseErrorHandler;
 
-import com.emc.documentum.rest.client.sample.model.json.JsonRestError;
+import com.ot.akbp.commons.util.rest.model.JsonRestError;
 import com.ot.akbp.commons.util.rest.model.RestError;
 import com.ot.d2rest.client.DCTMRestErrorException;
 
@@ -38,7 +38,7 @@ public class DCTMJacksonErrorHandler implements ResponseErrorHandler {
 		MediaType mediaType = response.getHeaders().getContentType();
 		RestError error = null;
 		for (HttpMessageConverter converter : converters) {
-			if (converter.canRead(JsonRestError.class, mediaType)) {
+			if (converter.canRead(com.ot.akbp.commons.util.rest.model.JsonRestError.class, mediaType)) {
 				error = (RestError) converter.read(JsonRestError.class, response);
 				break;
 			}

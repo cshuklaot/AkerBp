@@ -92,7 +92,7 @@ public abstract class JsonFeedBase<T extends InlineLinkable, E extends Entry<T>>
 		JsonFeedBase that = (JsonFeedBase) obj;
 		return Equals.equal(id, that.id) && Equals.equal(title, that.title) && Equals.equal(updated, that.updated)
 				&& Equals.equal(summary, that.summary) && Equals.equal(page, that.page)
-				&& Equals.equal(itemsPerPage, that.itemsPerPage) && Equals.equal(total, that.total)S;
+				&& Equals.equal(itemsPerPage, that.itemsPerPage) && Equals.equal(total, that.total);
 	}
 
 	@Override

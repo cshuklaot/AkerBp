@@ -637,6 +637,11 @@ public abstract class AbstractRestTemplateClient implements DCTMRestClient {
 				responseBodyClass, params);
 	}
 
+	public <T> T put(String uri, Class<? extends T> responseBodyClass, String... params) {
+		return sendRequest(uri, PUT, isXml() ? ACCEPT_XML_HEADERS : ACCEPT_JSON_HEADERS, null, responseBodyClass,
+				params);
+	}
+
 	protected <T> T post(String uri, T object, Object content, String contentMediaType,
 			Class<? extends T> responseBodyClass, String... params) {
 		T t = null;

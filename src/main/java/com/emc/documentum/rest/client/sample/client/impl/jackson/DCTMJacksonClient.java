@@ -6,7 +6,6 @@ package com.emc.documentum.rest.client.sample.client.impl.jackson;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.ABOUT;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.ACLS;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.ASPECT_TYPES;
-import static com.ot.akbp.commons.util.rest.model.LinkRelation.ASSIS_VALUES;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.ASSOCIATIONS;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.BATCH_CAPABILITIES;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.CABINETS;
@@ -25,7 +24,6 @@ import static com.ot.akbp.commons.util.rest.model.LinkRelation.GROUPS;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.MATERIALIZE;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.NETWORK_LOCATIONS;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.OBJECTS;
-import static com.ot.akbp.commons.util.rest.model.LinkRelation.OBJECT_ASPECTS;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.PRIMARY_CONTENT;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.RELATIONS;
 import static com.ot.akbp.commons.util.rest.model.LinkRelation.RELATION_TYPES;
@@ -57,6 +55,7 @@ import com.emc.documentum.rest.client.sample.model.json.JsonBatch;
 import com.emc.documentum.rest.client.sample.model.json.JsonBatchCapabilities;
 import com.emc.documentum.rest.client.sample.model.json.JsonFeeds;
 import com.emc.documentum.rest.client.sample.model.json.JsonFolderLink;
+import com.emc.documentum.rest.client.sample.model.json.JsonType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ot.akbp.commons.util.rest.model.Feed;
 import com.ot.akbp.commons.util.rest.model.FolderLink;
@@ -64,6 +63,7 @@ import com.ot.akbp.commons.util.rest.model.HomeDocument;
 import com.ot.akbp.commons.util.rest.model.JsonHomeDocument;
 import com.ot.akbp.commons.util.rest.model.JsonObject;
 import com.ot.akbp.commons.util.rest.model.JsonRepository;
+import com.ot.akbp.commons.util.rest.model.JsonType71;
 import com.ot.akbp.commons.util.rest.model.LinkRelation;
 import com.ot.akbp.commons.util.rest.model.Linkable;
 import com.ot.akbp.commons.util.rest.model.Repository;
@@ -341,17 +341,6 @@ public class DCTMJacksonClient extends AbstractRestTemplateClient implements DCT
 	@Override
 	public RestObject getAspectType(String aspectType, String... params) {
 		return get(getRepository().getHref(ASPECT_TYPES) + "/" + aspectType, false, JsonObject.class, params);
-	}
-
-	@Override
-	public ValueAssistant getValueAssistant(RestType type, ValueAssistantRequest request, String... params) {
-		return post(type.getHref(ASSIS_VALUES), new JsonValueAssistantRequest(request), JsonValueAssistance.class,
-				params);
-	}
-
-	@Override
-	public ObjectAspects attach(RestObject object, String... aspects) {
-		return post(object.getHref(OBJECT_ASPECTS), new JsonObjectAspects(aspects), JsonObjectAspects.class);
 	}
 
 	@Override

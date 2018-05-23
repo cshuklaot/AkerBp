@@ -5,6 +5,7 @@ package com.emc.documentum.rest.client.sample.model.json;
 
 import com.ot.akbp.commons.util.rest.model.JsonObject;
 import com.ot.akbp.commons.util.rest.model.JsonRepository;
+import com.ot.akbp.commons.util.rest.model.JsonType71;
 
 public class JsonFeeds {
 	public static class ObjectFeed extends JsonFeed<JsonObject> {
@@ -16,7 +17,9 @@ public class JsonFeeds {
 	public static class FolderLinkFeed extends JsonFeed<JsonFolderLink> {
 	}
 
-	public static class SearchFeed extends JsonSearchFeed<JsonObject> {
+	public static class TypeFeed extends JsonFeed<JsonType> {
 	}
 
+	public static class TypeFeed71 extends JsonFeed<JsonType71> {
+	}
 }
