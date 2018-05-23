@@ -47,17 +47,19 @@ public class UploadController {
 		Map<String, Object> map = new HashMap();
 		MAPPER.process(dom, map);
 		printStep("create a folder under the Temp cabinet");
-		map.put("object_name", "my_new_folder");
+		map.put("object_name", "obj_with_content");
 		DCTMRestClientBinding binding = DCTMRestClientBinding.JSON;
 
 		DCTMRestClient client = DCTMRestClientBuilder.buildSilently(binding, "http://localhost:8080/d2rest", "corp",
 				"dmadmin", "demo.demo");
-		RestObject tempCabinet = client.getCabinet("Temp");
-		RestObject newFolder = new PlainRestObject(map);
-
-		RestObject createdFolder = client.createFolder(tempCabinet, newFolder);
-		print(createdFolder);
+		RestObject tempCabinet = client.getCabinet("dmadmin");
+		printStep("create a document with binary content under the Temp cabinet");
+		RestObject newObjectWithContent = new PlainRestObject(map);
+		RestObject createdObjectWithContent = client.createDocument(tempCabinet, newObjectWithContent,
+				"I'm the content of the object", "text/plain", "format", "crtext");
+		print(createdObjectWithContent);
 		printNewLine();
+
 		return ResponseEntity.ok().build();
 	}
 
