@@ -5,7 +5,7 @@ package com.ot.akbp.commons.util.rest.model;
 
 import java.util.Objects;
 
-import com.emc.documentum.rest.client.sample.client.util.Equals;
+import com.ot.akbp.rest.client.sample.client.util.Equals;
 
 public class JsonRestError implements RestError {
 	private int status;

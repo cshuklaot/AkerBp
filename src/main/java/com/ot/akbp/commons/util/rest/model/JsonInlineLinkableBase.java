@@ -7,10 +7,10 @@ import java.util.Objects;
 
 import org.springframework.util.StringUtils;
 
-import com.emc.documentum.rest.client.sample.client.util.Equals;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ot.akbp.rest.client.sample.client.util.Equals;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class JsonInlineLinkableBase extends JsonLinkableBase implements InlineLinkable {

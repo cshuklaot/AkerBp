@@ -1,13 +1,17 @@
 /*
  * Copyright (c) 2018. Open Text Corporation. All Rights Reserved.
  */
-package com.ot.akbp.commons.util.rest.model;
+package com.ot.akbp.rest.client.sample.model.json;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.ot.akbp.commons.util.rest.model.HomeDocument;
+import com.ot.akbp.commons.util.rest.model.JsonLink;
+import com.ot.akbp.commons.util.rest.model.Link;
+import com.ot.akbp.commons.util.rest.model.LinkableBase;
 import com.ot.akbp.rest.client.sample.client.util.Equals;
 
 public class JsonHomeDocument extends LinkableBase implements HomeDocument {

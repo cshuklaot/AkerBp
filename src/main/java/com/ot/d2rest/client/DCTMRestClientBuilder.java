@@ -3,19 +3,19 @@
  */
 package com.ot.d2rest.client;
 
-import static com.emc.documentum.rest.client.sample.client.util.Reader.read;
+import static com.ot.akbp.rest.client.sample.client.util.Reader.read;
 
 import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emc.documentum.rest.client.sample.client.impl.AbstractRestTemplateClient;
-import com.emc.documentum.rest.client.sample.client.impl.ClientAsyncRestTemplateClient;
-import com.emc.documentum.rest.client.sample.client.impl.jackson.DCTMJacksonClient;
-import com.emc.documentum.rest.client.sample.client.util.Debug;
 import com.ot.akbp.commons.util.rest.model.Entry;
 import com.ot.akbp.commons.util.rest.model.Feed;
 import com.ot.akbp.commons.util.rest.model.Repository;
+import com.ot.akbp.rest.client.sample.client.impl.AbstractRestTemplateClient;
+import com.ot.akbp.rest.client.sample.client.impl.ClientAsyncRestTemplateClient;
+import com.ot.akbp.rest.client.sample.client.impl.jackson.DCTMJacksonClient;
+import com.ot.akbp.rest.client.sample.client.util.Debug;
 
 /**
  * build a DCTMRestClient with parameters

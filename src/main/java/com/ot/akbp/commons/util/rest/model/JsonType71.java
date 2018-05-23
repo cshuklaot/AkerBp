@@ -5,8 +5,8 @@ package com.ot.akbp.commons.util.rest.model;
 
 import java.util.Objects;
 
-import com.emc.documentum.rest.client.sample.client.util.Equals;
-import com.emc.documentum.rest.client.sample.model.json.JsonType;
+import com.ot.akbp.rest.client.sample.client.util.Equals;
+import com.ot.akbp.rest.client.sample.model.json.JsonType;
 
 public class JsonType71 extends JsonType {
 	private JsonType type;

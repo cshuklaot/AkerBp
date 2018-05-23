@@ -6,8 +6,8 @@ package com.ot.akbp.commons.util.rest.model;
 import java.util.Map;
 import java.util.Objects;
 
-import com.emc.documentum.rest.client.sample.client.util.Equals;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.ot.akbp.rest.client.sample.client.util.Equals;
 
 public class JsonObject extends JsonInlineLinkableBase implements RestObject {
 	private String name;

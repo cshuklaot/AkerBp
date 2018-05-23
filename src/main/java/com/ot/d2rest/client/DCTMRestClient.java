@@ -14,9 +14,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 
-import com.emc.documentum.rest.client.batch.Batch;
-import com.emc.documentum.rest.client.batch.Capabilities;
-import com.emc.documentum.rest.client.sample.client.impl.AbstractRestTemplateClient.ClientType;
 import com.ot.akbp.commons.util.rest.annotation.ClientAsyncOption;
 import com.ot.akbp.commons.util.rest.annotation.NotBatchable;
 import com.ot.akbp.commons.util.rest.model.Feed;
@@ -27,6 +24,9 @@ import com.ot.akbp.commons.util.rest.model.Linkable;
 import com.ot.akbp.commons.util.rest.model.Repository;
 import com.ot.akbp.commons.util.rest.model.RestObject;
 import com.ot.akbp.commons.util.rest.model.RestType;
+import com.ot.akbp.rest.client.batch.Batch;
+import com.ot.akbp.rest.client.batch.Capabilities;
+import com.ot.akbp.rest.client.sample.client.impl.AbstractRestTemplateClient.ClientType;
 
 /**
  * The sample REST client library

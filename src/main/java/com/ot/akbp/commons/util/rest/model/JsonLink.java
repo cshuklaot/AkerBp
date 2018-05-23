@@ -5,9 +5,9 @@ package com.ot.akbp.commons.util.rest.model;
 
 import java.util.Objects;
 
-import com.emc.documentum.rest.client.sample.client.util.Equals;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ot.akbp.rest.client.sample.client.util.Equals;
 
 public class JsonLink implements Link {
 	@JsonProperty
