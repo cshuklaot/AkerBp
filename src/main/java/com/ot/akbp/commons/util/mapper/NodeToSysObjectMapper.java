@@ -1,7 +1,6 @@
 package com.ot.akbp.commons.util.mapper;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -81,8 +80,7 @@ public class NodeToSysObjectMapper {
 	 * @throws TransformerException
 	 *             if one of the XPath expressions is invalid.
 	 */
-	public void process(final DOMHelper node, final HashMap<String, Object> object)
-			throws TransformerException, Exception {
+	public void process(final DOMHelper node, final Map<String, Object> object) throws TransformerException, Exception {
 		if (node == null) {
 			return;
 		}
@@ -111,7 +109,7 @@ public class NodeToSysObjectMapper {
 	 *            The setter
 	 */
 	private void mapRepeatingAttribute(final String attrName, final NodeList valueNodes,
-			final HashMap<String, Object> propertyMap) throws Exception {
+			final Map<String, Object> propertyMap) throws Exception {
 		final int nValues = valueNodes.getLength();
 		List<String> valueList = new ArrayList<>();
 		for (int i = 0; i < nValues; ++i) {
@@ -134,8 +132,8 @@ public class NodeToSysObjectMapper {
 	 * @param setter
 	 *            The setter
 	 */
-	private void mapSingleAttribute(final String attrName, final Node valueNode,
-			final HashMap<String, Object> propertyMap) throws Exception {
+	private void mapSingleAttribute(final String attrName, final Node valueNode, final Map<String, Object> propertyMap)
+			throws Exception {
 		if (valueNode != null) {
 			propertyMap.put(attrName, getStringFromNode(valueNode));
 		}

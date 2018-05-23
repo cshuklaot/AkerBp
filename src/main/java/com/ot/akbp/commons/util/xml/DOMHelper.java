@@ -908,7 +908,11 @@ public class DOMHelper {
 	 */
 	public NodeList selectNodeList(final String xpath) throws TransformerException {
 		LOGGER.trace("selectNodeList, xpath: \"" + xpath + "\"");
-		return XPathAPI.selectNodeList(this.contextNode, xpath);
+		return XPathAPI.selectNodeList(this.contextNode, xpath, getNameSpaceNullChk());
+	}
+
+	private Node getNameSpaceNullChk() {
+		return nameSpaceNode == null ? this.contextNode : nameSpaceNode;
 	}
 
 	/**
@@ -935,7 +939,7 @@ public class DOMHelper {
 	 *             If the expression is invalid.
 	 */
 	public Node selectSingleNode(final String xpath, Node namespaceNode) throws TransformerException {
-		return XPathAPI.selectSingleNode(this.contextNode, xpath);
+		return XPathAPI.selectSingleNode(this.contextNode, xpath, getNameSpaceNullChk());
 	}
 
 	/**
